@@ -4,7 +4,7 @@ This package implements the nonparametric covariate balancing method for surviva
 
 ## Example
 
-```
+```{r}
 set.seed(123)
 
 n = 200 #sample size
