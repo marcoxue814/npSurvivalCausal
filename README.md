@@ -4,7 +4,7 @@ This package implements the nonparametric covariate balancing method for surviva
 
 ## Example
 
-```{r}
+```r
 set.seed(123)
 
 n = 200 #sample size
@@ -34,9 +34,9 @@ Xstd = transform.sob(X)$Xstd # standardize X to [0,1]^p
 K = getGram(Xstd) # get Gram matrix using Sobolev kernel
 
 # design a grid for the tuning parameter
-nlam1 <- 25
+nlam1 = 25
 # lambda for DTE
-lams1 <- exp(seq(log(1e-8), log(1e-3), len=nlam1))
+lams1 = exp(seq(log(1e-8), log(1e-3), len=nlam1))
 
 # kernel based methods for D = 1
 fit1 = STE.ncb.SN(treat, K, lam1s=lams1)
