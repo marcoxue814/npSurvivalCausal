@@ -1,4 +1,4 @@
-DTE.ncb.core <- function(ind, K, lam1s, lam2s=1e4*lam1s, lower=1, upper=Inf,
+STE.ncb.core <- function(ind, K, lam1s, lam2s=1e4*lam1s, lower=1, upper=Inf,
                          thresh.ratio=1e-8, traceit=TRUE, w0=NULL, maxit=100,
                          maxit2=25, xtol_rel=1e-4, xtol_rel2=1e-2,
                          check=FALSE, full=FALSE){ 
@@ -172,11 +172,11 @@ outer_obj_grad = function(w, N, K, alpha, tind, lam1s, lam2s) {
               "gradient" = as.vector(grad)))
 }
 
-DTE.ncb.SN <- function(ind, K, lam1s, lam2s=1e4*lam1s, lower=1, upper=Inf,
+STE.ncb.SN <- function(ind, K, lam1s, lam2s=1e4*lam1s, lower=1, upper=Inf,
                        thresh.ratio=1e-8, traceit=TRUE, w0=NULL, maxit=100,
                        maxit2=25, xtol_rel=1e-4, xtol_rel2=1e-2, method=1,
                        check=FALSE, full=FALSE){
-  ores <- DTE.ncb.core(ind=ind, K=K, lam1s, lam2s=lam2s, lower=lower, upper=upper,
+  ores <- STE.ncb.core(ind=ind, K=K, lam1s, lam2s=lam2s, lower=lower, upper=upper,
                        thresh.ratio=thresh.ratio, traceit=traceit, w0=w0,
                        maxit=maxit, maxit2=maxit2, xtol_rel=xtol_rel, xtol_rel2=xtol_rel2,
                        check=check, full=full)
